@@ -180,7 +180,4 @@ RUN if [ "$MODEL_TYPE" = "z-image-turbo" ]; then \
     fi
 
 # Stage 3: Final image
-FROM base AS final
-
-# Copy models from stage 2 to the final image
-# Models are provided by the RunPod Network Volume
+FROM downloader AS final
